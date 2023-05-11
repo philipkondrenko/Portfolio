@@ -30,10 +30,10 @@ const darkFooter = document.querySelector('footer')
 
 
 darkModeButton.addEventListener('click', () => {
-    if (darkModeSign.getAttribute('src') == "/images/dark-mode.png") {
-        darkModeSign.src = "/images/dark-mode-light.png"
+    if (darkModeSign.getAttribute('src') == "images/dark-mode.png") {
+        darkModeSign.src = "images/dark-mode-light.png"
     } else {
-        darkModeSign.src = "/images/dark-mode.png"
+        darkModeSign.src = "images/dark-mode.png"
     }
 
     darkModeH1.classList.toggle('dark-mode-toggle')
