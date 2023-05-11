@@ -65,9 +65,9 @@ header {
 }
 
 .nav-branding {
+    font-family: 'Bruno Ace SC', cursive;
     font-size: 2.2rem;
     text-decoration-color: var(--secondary-color);
-    font-family: 'Caveat', cursive;
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -191,20 +191,17 @@ header {
 }
 
 .main-container h1 {
-    letter-spacing: 1.2px;
     font-weight: 500;
     margin: 15px 0;
 }
 
-.main-container h4 {
-    letter-spacing: 1.2px;
-    font-weight: 300;
+.main-container p {
     font-size: 20px;
     margin: 15px 0;
 }
 
-#bold {
-    font-weight: 500;
+.styled-name {
+    font-family: 'Bruno Ace SC', cursive;
 }
 
 .large-image {
@@ -220,7 +217,7 @@ header {
 
 .cta-button {
     margin: 15px 0;
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
     border-radius: 22px;
     border: none;
     padding: 10px 22px;
@@ -256,7 +253,6 @@ header {
 .skills, .about {
     width: min(1000px, 80%);
     margin: auto;
-    font-weight: bold;
     padding: 10vh 0;
 }
 
