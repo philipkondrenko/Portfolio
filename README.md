@@ -1,3 +1,3 @@
 # Portfolio
-My Computer Science Portfolio.
+My Programming Portfolio.
 Updated as I learn. 
