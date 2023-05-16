@@ -21,13 +21,13 @@ const darkModeH4 = document.querySelector('p')
 const darkModeNav = document.querySelector('header')
 const darkModeNavLink = document.querySelectorAll('.nav-link')
 const darkModeLogo = document.querySelector('.nav-branding')
+const darkModeMenu = document.querySelector('.nav-menu')
 const darkModeBorder = document.querySelector('header')
 const darkModeSecondary = document.getElementById('secondary-container')
 const darkModeSkillsTopBorder = document.querySelector('.skills')
 const darkModeAboutTopBorder = document.querySelector('.about')
 const darkModeBar = document.querySelectorAll('.bar')
 const darkFooter = document.querySelector('footer')
-
 
 darkModeButton.addEventListener('click', () => {
     if (darkModeSign.getAttribute('src') == "images/dark-mode.png") {
@@ -47,6 +47,9 @@ darkModeButton.addEventListener('click', () => {
     for (let i = 0; i < darkModeBar.length; i+=1) {
         darkModeBar.item(i).classList.toggle('dark-mode-bar')
     }
+
+    darkModeMenu.classList.toggle('dark-mode-toggle')
+    const flexStyle = window.getComputedStyle(darkModeMenu)
 
     darkModeLogo.classList.toggle('dark-mode-toggle')
     darkModeBorder.classList.toggle('dark-mode-toggle-border')
