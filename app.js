@@ -40,6 +40,13 @@ darkModeButton.addEventListener('click', () => {
     darkModeBody.classList.toggle('dark-mode-toggle')
     darkModeH4.classList.toggle('dark-mode-toggle')
     darkModeNav.classList.toggle('dark-mode-toggle')
+    darkModeMenu.classList.toggle('dark-mode-toggle')
+    darkModeLogo.classList.toggle('dark-mode-toggle')
+    darkModeBorder.classList.toggle('dark-mode-toggle-border')
+    darkModeSecondary.classList.toggle('dark-mode-toggle')
+    darkModeSkillsTopBorder.classList.toggle('dark-mode-toggle-top')
+    darkModeAboutTopBorder.classList.toggle('dark-mode-toggle-top')
+    darkFooter.classList.toggle('dark-footer')
 
     for (let i = 0; i < darkModeNavLink.length; i+=1) {
         darkModeNavLink.item(i).classList.toggle('dark-mode-toggle')
@@ -49,11 +56,20 @@ darkModeButton.addEventListener('click', () => {
         darkModeBar.item(i).classList.toggle('dark-mode-bar')
     }
 
-    darkModeMenu.classList.toggle('dark-mode-toggle')
-    darkModeLogo.classList.toggle('dark-mode-toggle')
-    darkModeBorder.classList.toggle('dark-mode-toggle-border')
-    darkModeSecondary.classList.toggle('dark-mode-toggle')
-    darkModeSkillsTopBorder.classList.toggle('dark-mode-toggle-top')
-    darkModeAboutTopBorder.classList.toggle('dark-mode-toggle-top')
-    darkFooter.classList.toggle('dark-footer')
+    // Makes sure that dark mode hamburger menu border works properly on resize
+    if (screen.width < 768) {
+        if (!(darkModeMenu.classList.contains('dark-mode-menu'))) {
+            darkModeMenu.classList.add('dark-mode-menu')
+        } else if (darkModeMenu.classList.contains('dark-mode-menu')) {
+            darkModeMenu.classList.remove('dark-mode-menu')
+        }
+    }  
+    
+    window.addEventListener('resize', () => {
+        if (screen.width >= 768 && darkModeMenu.classList.contains('dark-mode-menu')) {
+            darkModeMenu.classList.remove('dark-mode-menu') 
+        } else if (screen.width < 768 && darkModeBody.classList.contains('dark-mode-toggle')) {
+            darkModeMenu.classList.add('dark-mode-menu')
+        }
+    })
 })

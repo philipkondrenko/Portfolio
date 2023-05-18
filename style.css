@@ -158,6 +158,11 @@ header {
     border-bottom: 1px solid var(--background-color);
 }
 
+.dark-mode-menu {
+    border-top: 1px solid var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+}
+
 .dark-mode-bar {
     background-color: var(--background-color);
 }
