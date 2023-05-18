@@ -56,7 +56,7 @@ darkModeButton.addEventListener('click', () => {
         darkModeBar.item(i).classList.toggle('dark-mode-bar')
     }
 
-    // Makes sure that dark mode hamburger menu border works properly on resize
+    // Makes sure that dark mode hamburger menu border works properly on screen resize
     if (screen.width < 768) {
         if (!(darkModeMenu.classList.contains('dark-mode-menu'))) {
             darkModeMenu.classList.add('dark-mode-menu')
