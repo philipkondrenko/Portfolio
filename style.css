@@ -121,7 +121,8 @@ header {
         gap: 0;
         flex-direction: column;
         background-color: var(--background-color);
-        border: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
         width: 100%;
         text-align: center;
         transition: 0.2s;
@@ -151,10 +152,6 @@ header {
 .dark-mode-toggle {
     background-color: var(--primary-color);
     color: var(--background-color);
-}
-
-.dark-mode-menu {
-    border: 1px solid var(--background-color);
 }
 
 .dark-mode-toggle-border {

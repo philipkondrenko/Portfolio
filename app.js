@@ -49,19 +49,7 @@ darkModeButton.addEventListener('click', () => {
         darkModeBar.item(i).classList.toggle('dark-mode-bar')
     }
 
-    if (screen.width < 768) {
-        darkModeMenu.classList.toggle('dark-mode-menu')
-    }
-
     darkModeMenu.classList.toggle('dark-mode-toggle')
-    window.addEventListener('resize', () => {
-        if (screen.width >= 768 && darkModeMenu.classList.contains('dark-mode-menu')) {
-            darkModeMenu.classList.toggle('dark-mode-menu')
-        } else if (screen.width < 768) {
-            darkModeMenu.classList.toggle('dark-mode-menu')
-        }
-    })
-    
     darkModeLogo.classList.toggle('dark-mode-toggle')
     darkModeBorder.classList.toggle('dark-mode-toggle-border')
     darkModeSecondary.classList.toggle('dark-mode-toggle')
