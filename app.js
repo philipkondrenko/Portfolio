@@ -1,4 +1,4 @@
-// burger menu 
+// Burger menu 
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav-menu')
 
@@ -12,7 +12,7 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active")
 }))
 
-// Dark mode
+// Dark mode (switches colors of all HTML elements)
 const darkModeButton = document.getElementById('dark-mode-button')
 const darkModeSign = document.getElementById('dark-mode-image')
 const darkModeH1 = document.querySelector('h1')
@@ -40,6 +40,7 @@ darkModeButton.addEventListener('click', () => {
     darkModeBody.classList.toggle('dark-mode-toggle')
     darkModeH4.classList.toggle('dark-mode-toggle')
     darkModeNav.classList.toggle('dark-mode-toggle')
+
     for (let i = 0; i < darkModeNavLink.length; i+=1) {
         darkModeNavLink.item(i).classList.toggle('dark-mode-toggle')
     }
@@ -48,9 +49,19 @@ darkModeButton.addEventListener('click', () => {
         darkModeBar.item(i).classList.toggle('dark-mode-bar')
     }
 
-    darkModeMenu.classList.toggle('dark-mode-toggle')
-    const flexStyle = window.getComputedStyle(darkModeMenu)
+    if (screen.width < 768) {
+        darkModeMenu.classList.toggle('dark-mode-menu')
+    }
 
+    darkModeMenu.classList.toggle('dark-mode-toggle')
+    window.addEventListener('resize', () => {
+        if (screen.width >= 768 && darkModeMenu.classList.contains('dark-mode-menu')) {
+            darkModeMenu.classList.toggle('dark-mode-menu')
+        } else if (screen.width < 768) {
+            darkModeMenu.classList.toggle('dark-mode-menu')
+        }
+    })
+    
     darkModeLogo.classList.toggle('dark-mode-toggle')
     darkModeBorder.classList.toggle('dark-mode-toggle-border')
     darkModeSecondary.classList.toggle('dark-mode-toggle')
