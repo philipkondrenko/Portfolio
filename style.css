@@ -3,11 +3,13 @@
     --primary-color: #262534;
     --secondary-color: #6c64fa;
     --text-color: #6c6c7c;
+    --font: 'Poppins', sans-serif;
+    --logo-font: 'Caveat', cursive;
 }
 
 /* Default styling *********************/
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -65,7 +67,7 @@ header {
 }
 
 .nav-branding {
-    font-family: 'Bruno Ace SC', cursive;
+    font-family: var(--logo-font);
     font-size: 2.2rem;
     text-decoration-color: var(--secondary-color);
     color: var(--primary-color);
@@ -188,10 +190,6 @@ header {
 .main-container p {
     font-size: 20px;
     margin: 15px 0;
-}
-
-.styled-name {
-    font-family: 'Bruno Ace SC', cursive;
 }
 
 .large-image {
