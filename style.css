@@ -10,6 +10,7 @@
 /* Default styling *********************/
 * {
     font-family: var(--font);
+    letter-spacing: 1px;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -208,7 +209,7 @@ header {
     letter-spacing: 1px;
     border-radius: 22px;
     border: none;
-    padding: 10px 22px;
+    padding: 12px 20px;
     background-color: var(--secondary-color);
     box-shadow: .5px .5px 1px rgba(0, 0, 0, 0.16);
     font-size: 1rem;
